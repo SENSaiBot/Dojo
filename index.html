@@ -3,34 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SenseiBot Dojo</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>SENSa.i.-BOT Subscription Management</title>
+    <!-- PayPal SDK for Sandbox Environment -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AUyUHqxnGtW4fhTYgWBgVKAZGVnbJbYWseqqnJ7TUujhVkFxdIoRyhIAIgke-Y7jBhKa7bcf4TBFdJY0&currency=USD"></script>
+    <!-- Google Analytics Setup -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 50px auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        h2 { text-align: center; color: #333; }
+        #paypal-button-container { text-align: center; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to SenseiBot Dojo</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about">
-        <h2>About SenseiBot</h2>
-        <p>This is a brief description of SenseiBot and its capabilities...</p>
-    </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>Overview of services offered by SenseiBot...</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Information on how to get in touch...</p>
-    </section>
-    <footer>
-        <p>© 2024 SenseiBot Dojo</p>
-    </footer>
+    <div class="container">
+        <h2>SENSa.i.-BOT Subscription Management</h2>
+        <p>Select a subscription plan and complete your payment through PayPal to get started:</p>
+        <div id="paypal-button-container"></div>
+    </div>
+    <script>
+        // Render the PayPal button into #paypal-button-container
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                // This function sets up the details of the transaction
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '25.00' // Set to the price of the Gold tier
+                        },
+                        description: 'Gold Tier Subscription - 2,700 characters per instruction'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                // This function captures the funds from the transaction
+                return actions.order.capture().then(function(details) {
+                    // Update user subscription to Gold tier
+                    updateSubscription('gold');
+                    alert('Transaction completed by ' + details.payer.name.given_name);
+                });
+            },
+            onError: function(err) {
+                console.error('Error during payment process:', err);
+            }
+        }).render('#paypal-button-container');
+        
+        // Placeholder for user object, replace with actual user management system
+        const user = {
+            tier: 'free', // Example initial tier
+            characterLimit: 700 // Example character limit for free tier
+        };
+
+        // Function to update user subscription based on payment
+        function updateSubscription(tier) {
+            switch (tier) {
+                case 'free':
+                    user.characterLimit = 700;
+                    user.tier = 'free';
+                    break;
+                case 'gold':
+                    user.characterLimit = 2700;
+                    user.tier = 'gold';
+                    break;
+                case 'platinum':
+                    user.characterLimit = Infinity;
+                    user.tier = 'platinum';
+                    break;
+                default:
+                    user.characterLimit = 700;
+                    user.tier = 'free';
+            }
+            console.log('User subscription updated:', user);
+            // Save to database or perform further actions as necessary
+        }
+    </script>
 </body>
 </html>
