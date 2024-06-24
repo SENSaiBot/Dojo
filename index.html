@@ -15,17 +15,37 @@
         gtag('config', 'YOUR_TRACKING_ID');
     </script>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; background: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-        h2 { text-align: center; color: #333; }
-        #paypal-button-container { text-align: center; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        #paypal-button-container {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>SENSa.i.-BOT Subscription Management</h2>
-        <p>Select a subscription plan and complete your payment through PayPal to get started:</p>
+        <h2>Welcome to SENSa.i.-BOT</h2>
+        <p>Choose your subscription plan and complete the payment through PayPal to get started with our premium features.</p>
         <div id="paypal-button-container"></div>
+        <p>After payment, you will have access to more advanced bot creation tools and extended features.</p>
     </div>
     <script>
         // Render the PayPal button into #paypal-button-container
