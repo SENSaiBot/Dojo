@@ -1,71 +1,62 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa; /* Light cyan background for the entire page */
-    margin: 0;
-    padding: 0;
-}
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #ffffff; /* White background for the container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px; /* Rounded corners for the container */
-}
-header {
-    text-align: center;
-    background-color: #00796b; /* Dark teal background for the header */
-    color: #ffffff;
-    padding: 20px 0;
-    border-radius: 8px 8px 0 0; /* Rounded top corners for the header */
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-nav ul li a:hover {
-    text-decoration: underline;
-}
-h1 {
-    margin: 10px 0 0 0;
-}
-h2 {
-    text-align: center;
-    color: #00796b; /* Dark teal color for the section headings */
-    margin-bottom: 10px;
-}
-p, ul {
-    text-align: center;
-    color: #004d40; /* Darker teal color for the text */
-}
-ul {
-    list-style: none;
-    padding: 0;
-}
-ul li {
-    margin: 10px 0;
-    background: #b2dfdb; /* Light teal background for the list items */
-    padding: 10px;
-    border-radius: 4px; /* Rounded corners for the list items */
-}
-a {
-    color: #007BFF; /* Blue color for the links */
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: c
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENSa.i.-BOT Subscription Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#plans">Subscription Plans</a></li>
+                    <li><a href="#pay-per-instruction">Pay-Per-Instruction</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <h1>Welcome to SENSa.i.-BOT</h1>
+        </header>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>SENSa.i.-BOT is your automated dojo for mastering the art of technology. We provide personalized bot training services to help you enhance your digital operations efficiently.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer tailored bot training services to enhance your digital operations. Whether you're looking to automate tasks or develop complex workflows, SENSa.i.-BOT has you covered.</p>
+        </section>
+        <section id="plans">
+            <h2>Subscription Plans</h2>
+            <p>Choose your subscription plan to get started with our premium features. Our plans are designed to cater to different needs, ensuring you get the best value.</p>
+            <ul>
+                <li><strong>Free Tier:</strong> Access basic features with a character limit of 700 per instruction.</li>
+                <li><strong>Gold Tier ($25/month):</strong> Unlock intermediate features with a character limit of 2700 per instruction.</li>
+                <li><strong>Platinum Tier ($33/month):</strong> Gain unlimited access to all features with no character limit.</li>
+            </ul>
+        </section>
+        <section id="pay-per-instruction">
+            <h2>Pay-Per-Instruction</h2>
+            <p>If you prefer not to subscribe, you can pay per instruction. This allows you to access our premium bot training services on a per-use basis.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="process_contact.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <p>Or reach out to us at <a href="mailto:support@sensaibot.com">support@sensaibot.com</a>.</p>
+        </section>
+        <footer>
+            <p>© 2024 SENSa.i.-BOT</p>
+        </footer>
+    </div>
+</body>
+</html>
