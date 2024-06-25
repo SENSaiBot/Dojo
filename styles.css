@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #e0f7fa; /* Light cyan background for the entire page */
     margin: 0;
     padding: 0;
 }
@@ -9,26 +9,28 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background: #fff;
+    background: #ffffff; /* White background for the container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners for the container */
 }
 header {
     text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #00796b; /* Dark teal background for the header */
+    color: #ffffff; /* White text color for the header */
+    padding: 20px 0;
+    border-radius: 8px 8px 0 0; /* Rounded top corners for the header */
 }
 h1 {
     margin: 0;
 }
 h2 {
     text-align: center;
-    color: #333;
+    color: #00796b; /* Dark teal color for the section headings */
     margin-bottom: 10px;
 }
 p, ul {
     text-align: center;
-    color: #666;
+    color: #004d40; /* Darker teal color for the text */
 }
 ul {
     list-style: none;
@@ -36,9 +38,12 @@ ul {
 }
 ul li {
     margin: 10px 0;
+    background: #b2dfdb; /* Light teal background for the list items */
+    padding: 10px;
+    border-radius: 4px; /* Rounded corners for the list items */
 }
 a {
-    color: #007BFF;
+    color: #007BFF; /* Blue color for the links */
     text-decoration: none;
 }
 a:hover {
@@ -48,6 +53,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px 0;
-    background-color: #333;
-    color: #fff;
+    background-color: #004d40; /* Darker teal background for the footer */
+    color: #ffffff; /* White text color for the footer */
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners for the footer */
 }
