@@ -20,8 +20,24 @@ header {
     padding: 20px 0;
     border-radius: 8px 8px 0 0; /* Rounded top corners for the header */
 }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
 h1 {
-    margin: 0;
+    margin: 10px 0 0 0;
 }
 h2 {
     text-align: center;
