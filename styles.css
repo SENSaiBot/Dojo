@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #e0f7fa; /* Light cyan background for the entire page */
+    background-color: #2BFEEB; /* Light blue background for the entire page */
     margin: 0;
     padding: 0;
 }
@@ -15,7 +15,7 @@ body {
 }
 header {
     text-align: center;
-    background-color: #00796b; /* Dark teal background for the header */
+    background-color: #10E93C; /* Green background for the header */
     color: #ffffff; /* White text color for the header */
     padding: 20px 0;
     border-radius: 8px 8px 0 0; /* Rounded top corners for the header */
@@ -48,7 +48,7 @@ h1 {
 }
 h2 {
     text-align: center;
-    color: #d32f2f; /* Crimson color for the section headings */
+    color: #10E93C; /* Green color for the section headings */
     margin-bottom: 10px;
 }
 p, ul {
