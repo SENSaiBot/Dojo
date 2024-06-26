@@ -4,14 +4,16 @@ body {
     background-color: #000000; /* Black background for the entire page */
     margin: 0;
     padding: 0;
+    color: #ffffff; /* White text color */
 }
 .container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background: #ffffff; /* White background for the container */
+    background: #000000; /* Black background for the container */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px; /* Rounded corners for the container */
+    border: 2px solid #10E93C; /* Green border for the container */
 }
 header {
     text-align: center;
@@ -45,15 +47,21 @@ nav ul li a:hover {
 }
 h1 {
     margin: 10px 0 0 0;
+    color: #10E93C; /* Green color for the main heading */
 }
 h2 {
     text-align: center;
     color: #10E93C; /* Green color for the section headings */
     margin-bottom: 10px;
 }
+h3 {
+    text-align: center;
+    color: #2BFEEB; /* Blue color for sub-headings */
+    margin-bottom: 10px;
+}
 p, ul {
     text-align: center;
-    color: #004d40; /* Darker teal color for the text */
+    color: #ffffff; /* White text color */
 }
 ul {
     list-style: none;
@@ -61,9 +69,10 @@ ul {
 }
 ul li {
     margin: 10px 0;
-    background: #b2dfdb; /* Light teal background for the list items */
+    background: #2BFEEB; /* Light blue background for the list items */
     padding: 10px;
     border-radius: 4px; /* Rounded corners for the list items */
+    color: #000000; /* Black text color */
 }
 a {
     color: #2BFEEB; /* Blue color for the links */
@@ -101,12 +110,14 @@ img {
     max-width: 400px;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #004d40; /* Darker teal border */
+    border: 1px solid #10E93C; /* Green border */
     border-radius: 4px;
+    background-color: #000000; /* Black background for inputs */
+    color: #ffffff; /* White text color for inputs */
 }
 #comment-form button {
     background-color: #10E93C; /* Green background for the button */
-    color: #ffffff; /* White text color for the button */
+    color: #000000; /* Black text color for the button */
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -114,13 +125,15 @@ img {
 }
 #comment-form button:hover {
     background-color: #2BFEEB; /* Blue background for the button on hover */
+    color: #000000; /* Black text color on hover */
 }
 .comment {
-    background: #f0f0f0; /* Light grey background for comments */
+    background: #2BFEEB; /* Light blue background for comments */
     margin: 10px 0;
     padding: 10px;
     border-radius: 4px;
     text-align: left;
+    color: #000000; /* Black text color */
 }
 .comment strong {
     display: block;
