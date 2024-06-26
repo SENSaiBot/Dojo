@@ -20,6 +20,13 @@ header {
     padding: 20px 0;
     border-radius: 8px 8px 0 0; /* Rounded top corners for the header */
 }
+header #logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
 nav ul {
     list-style-type: none;
     padding: 0;
