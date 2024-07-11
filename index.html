@@ -5,16 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SENSa.i.-BOT™ Subscription Management</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_TRACKING_ID');
-    </script> -->
     <!-- PayPal SDK for Sandbox Environment -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AUyUHqxnGtW4fhTYgWBgVKAZGVnbJbYWseqqnJ7TUujhVkFxdIoRyhIAIgke-Y7jBhKa7bcf4TBFdJY0&currency=USD"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
 </head>
 <body>
     <div class="container">
@@ -24,7 +16,6 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#plans">Plans</a></li>
-                    <li><a href="#pay-per-instruction">Pay-Per-Instruction</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -46,13 +37,10 @@
             <p>Choose your subscription plan to get started with our premium features. Our plans are designed to cater to different needs, ensuring you get the best value.</p>
             <ul>
                 <li><strong>Free Tier:</strong> Access basic features with a character limit of 700 per instruction.</li>
-                <li><strong>Gold Tier ($25/month):</strong> Unlock intermediate features with a character limit of 2700 per instruction.</li>
-                <li><strong>Platinum Tier ($33/month):</strong> Gain unlimited access to all features with no character limit.</li>
+                <li><strong>Paid Tier ($15/month):</strong> Unlock all premium features with no character limit.</li>
             </ul>
-        </section>
-        <section id="pay-per-instruction">
-            <h2>Pay-Per-Instruction</h2>
-            <p>If you prefer not to subscribe, you can pay per instruction. This allows you to access our premium bot training services on a per-use basis. Price per instruction: $10</p>
+            <!-- PayPal Button -->
+            <div id="paypal-button-container"></div>
         </section>
         <section id="comments-section">
             <h3>User Comments and Suggestions</h3>
@@ -70,5 +58,29 @@
         </footer>
     </div>
     <script src="scripts.js"></script>
+    <script>
+        // PayPal Button Integration
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '15.00' // Set to the price of the paid tier
+                        },
+                        description: 'Paid Tier Subscription - Unlimited characters per instruction'
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name);
+                    // Implement the functionality to upgrade the user's subscription
+                });
+            },
+            onError: function(err) {
+                console.error('Error during payment process:', err);
+            }
+        }).render('#paypal-button-container');
+    </script>
 </body>
 </html>
