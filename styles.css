@@ -1,7 +1,6 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000000; /* Black background for the entire page */
+    background-color: #000000; /* Black background */
     margin: 0;
     padding: 0;
     color: #ffffff; /* White text color */
@@ -10,17 +9,17 @@ body {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background: #000000; /* Black background for the container */
+    background: #000000; /* Black background */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px; /* Rounded corners for the container */
-    border: 2px solid #10E93C; /* Green border for the container */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #10E93C; /* Green border */
 }
 header {
     text-align: center;
-    background-color: #10E93C; /* Green background for the header */
-    color: #ffffff; /* White text color for the header */
+    background-color: #10E93C; /* Green background */
+    color: #ffffff; /* White text color */
     padding: 20px 0;
-    border-radius: 8px 8px 0 0; /* Rounded top corners for the header */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
 }
 header #logo {
     display: block;
@@ -71,7 +70,7 @@ ul li {
     margin: 10px 0;
     background: #2BFEEB; /* Light blue background for the list items */
     padding: 10px;
-    border-radius: 4px; /* Rounded corners for the list items */
+    border-radius: 4px; /* Rounded corners */
     color: #000000; /* Black text color */
 }
 a {
@@ -85,58 +84,13 @@ footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px 0;
-    background-color: #004d40; /* Darker teal background for the footer */
-    color: #ffffff; /* White text color for the footer */
-    border-radius: 0 0 8px 8px; /* Rounded bottom corners for the footer */
+    background-color: #004d40; /* Darker teal background */
+    color: #ffffff; /* White text color */
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
 }
 img {
     display: block;
     margin: 20px auto;
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-}
-/* Comments Section */
-#comments-section {
-    margin-top: 20px;
-}
-#comment-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#comment-form input, #comment-form textarea {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #10E93C; /* Green border */
-    border-radius: 4px;
-    background-color: #000000; /* Black background for inputs */
-    color: #ffffff; /* White text color for inputs */
-}
-#comment-form button {
-    background-color: #10E93C; /* Green background for the button */
-    color: #000000; /* Black text color for the button */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-#comment-form button:hover {
-    background-color: #2BFEEB; /* Blue background for the button on hover */
-    color: #000000; /* Black text color on hover */
-}
-.comment {
-    background: #2BFEEB; /* Light blue background for comments */
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 4px;
-    text-align: left;
-    color: #000000; /* Black text color */
-}
-.comment strong {
-    display: block;
-    margin-bottom: 5px;
-    color: #10E93C; /* Green color for the commenter's name */
-}
+    border-radius:
